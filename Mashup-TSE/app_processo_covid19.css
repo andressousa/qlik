@@ -26,12 +26,19 @@ body {
 	margin-top: 40px;
 }
 
-.custom-logo, .custom-title, .custom-link{
+.custom-logo, .custom-title{
 	height: 60px;
+	overflow: hidden;;
+}
+
+.custom-link{
+	height: 40px;
+	overflow: hidden;
 }
 
 .custom-kpi{
 	height: 200px;
+	overflow: hidden;
 }
 
 .custom-export, .custom-reload{
