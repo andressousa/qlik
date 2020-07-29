@@ -1,7 +1,7 @@
 # Gauge Extension
 Qlik Sense Gauge Extension.
 
-##Configuration
+## Configuration
 - Measures: The first measurement will be displayed on the graph. All other measurements will be displayed as a tooltip.
 
 ##Addons
