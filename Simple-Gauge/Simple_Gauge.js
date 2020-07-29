@@ -96,15 +96,14 @@ define(["jquery", "./d3.min", "./d3.layout.cloud"], function($, d3) {
         },
         paint: function($element, layout) {
             var d3Format;
-            var tooltipTitle    = layout.qHyperCube.qMeasureInfo;
-            var tooltipValues   = layout.qHyperCube.qGrandTotalRow;
+            var tooltipTitle    =layout.qHyperCube.qMeasureInfo;
+            var tooltipValues   =layout.qHyperCube.qGrandTotalRow;
             var format          = layout.qHyperCube.qMeasureInfo[0].qNumFormat.qFmt;
             var value           = layout.qHyperCube.qDataPages[0].qMatrix[0];
             var width           = $element.width();
             var height          = $element.height();
             var Vsize           = height * 1.4;
             var id              = "container_" + layout.qInfo.qId;
-
             sst                 = value[0].qNum;
             SST                 = value[0].qNum;
             rSST                = SST;
@@ -114,7 +113,7 @@ define(["jquery", "./d3.min", "./d3.layout.cloud"], function($, d3) {
             Rwidth              = width * 0.15;
 
             document.getElementById(id) ? $("#" + id).empty().css("margin", "auto") : $element.append($('<div />;').attr("id", id).width(width).height(height).css("margin", "auto !important")).after('<div id="tooltip_'+id+'" class="tooltip-text"></div>');
-            $('head').append('<style type="text/css">.qv-object-content-container .tooltip-text{display:none;width: 50%;height: auto;background-color: rgba(0, 0, 0, 0.7);color: #fff;text-align: center;padding: 5px 5px 0 5px;border-radius: 6px;position: absolute;z-index: 999;top: 10px;left: 25%;}.qv-object-content-container:hover .tooltip-text{display: block;}.qv-object-content-container .tooltip-text p{display: block;float:left; width: 100%; margin: 0 0 5px 0;}</style>');
+            $('head').append('<style type="text/css">.qv-object-content-container .tooltip-text{display:none;width: calc(80% - 10px);left:10%;right:10%;top:10px;height: auto;background-color: rgba(0, 0, 0, 0.7);color: #fff;text-align: center;padding: 5px 5px 0 5px;border-radius: 6px;position: absolute;z-index: 999;}.qv-object-content-container:hover .tooltip-text{display: block;}.qv-object-content-container .tooltip-text p{display: block;float:left; width: 100%; margin: 0 0 5px 0;}</style>');
 
             if(format){
                 if (format.indexOf('%') != (-1)) {
@@ -176,9 +175,7 @@ function viz(
             clipHeight: height,
             ringInset: 20,
             ringWidth: 20,
-            pointerWidth: 10,
-            pointerTailLength: 5,
-            pointerHeadLengthPercent: 0.9,
+            pointerHeadLengthPercent: 0.6,
             minValue: Radstart,
             maxValue: Radend,
             minAngle: -90,
@@ -309,11 +306,9 @@ function viz(
                 .attr('alignment-baseline', 'central');
 
             var lineData = [
-                [config.pointerWidth / 2, 0],
+                [2, 0],
                 [0, -pointerHeadLength],
-                [-(config.pointerWidth / 2), 0],
-                [0, config.pointerTailLength],
-                [config.pointerWidth / 2, 0]
+                [-2, 0]
             ];
             var pointerLine = d3.svg.line().interpolate('monotone');
             var pg = svg.append('g').data([lineData])
