@@ -1,8 +1,11 @@
 # Utils
 - Qlik multipurpose functions.
 
-## Remove Acentos
-- This function removes accentuation from words.
+## Text Functions
+- Remove Accent - Replace accentuation from words. 
+  - eg. André -> Andre
+- Slugfy - Turn single text into slug text.
+  - eg. André Santos -> andre-santos
 
 **Usage**
 1. Include script into yout app using *$(Include=filename)* or copy its content;

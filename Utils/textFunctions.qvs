@@ -1,4 +1,4 @@
-﻿//SOURCE MAPPING
+﻿//ACCENT MAPPING
 
 [MAP]:
 Mapping LOAD * INLINE [
@@ -70,6 +70,8 @@ F1, F2
 	ÿ, y
 ];
 
-//SET FUNCTION INTO VARIABLE
-
+//REMOVE ACCENT
 SET removeAcentos = MapSubString('MAP', $1);
+
+//SLUGFY TEXT
+SET slugfy = KeepChar(Lower(Replace(MapSubString('MAP', $1), ' ', '-')), 'abcdefghijklmnopqrstuvwxyz-');
