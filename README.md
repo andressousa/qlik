@@ -6,3 +6,6 @@ Multpurpose Qlik Sense and Qlik View scripts
 
 ## Simple Gauge
 - Qlik Sense Gauge Extension.
+
+## Utils
+- Qlik multipurpose functions.
