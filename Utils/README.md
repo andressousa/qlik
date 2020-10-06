@@ -1,6 +1,10 @@
 # Utils
 - Qlik multipurpose functions.
 
+**Usage**
+1. Include script into yout app using *$(Include=filename)* or copy its content;
+2. In load script, call the function *$(removeAcentos(FIELD_NAME)) AS FIELD_NAME*;
+
 ## Text Functions
 - Remove Accent - Replace accentuation from words. 
   - eg. $(removeAcentos(André)) -> Andre
@@ -67,7 +71,3 @@
   - eg. $(dataSemestre('01/10/2020')) -> 2
   - eg. $(dataSemestre('01/11/2020')) -> 2
   - eg. $(dataSemestre('01/12/2020')) -> 2
-
-**Usage**
-1. Include script into yout app using *$(Include=filename)* or copy its content;
-2. In load script, call the function *$(removeAcentos(FIELD_NAME)) AS FIELD_NAME*;
