@@ -9,3 +9,8 @@ Multpurpose Qlik Sense and Qlik View scripts
 
 ## Utils
 - Qlik multipurpose functions.
+  - Date Functions
+  - Text Functions
+  - Masks
+    - CPF
+    - CNPJ

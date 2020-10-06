@@ -1,0 +1,11 @@
+//BIMESTRE
+SET dataBimestre 		= Ceil(Num(Month($1))/2);
+
+//TRIMESTRE
+SET dataTrimestre 		= Ceil(Num(Month($1))/3);
+
+//QUADRIMESTRE
+SET dataQuadrimestre 	= Ceil(Num(Month($1))/4);
+
+//SEMESTRE
+SET dataSemestre 		= Ceil(Num(Month($1))/6);
