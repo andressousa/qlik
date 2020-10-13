@@ -1,5 +1,5 @@
 # Scripts
-- Qlik multipurpose scripts.
+Qlik multipurpose scripts.
 
 ## Measures from file
 Load measures from a sheet file and use into master items.
