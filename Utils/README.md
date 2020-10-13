@@ -1,5 +1,5 @@
 # Utils
-- Qlik multipurpose functions.
+Qlik multipurpose functions.
 
 **Usage**
 1. Include script into your app using *$(Include=filename)* or copy its content;
