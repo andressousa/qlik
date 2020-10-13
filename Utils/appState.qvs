@@ -1,0 +1,27 @@
+// PUT THIS CODE INTO MAIN SECCION SCRIPT AFTER QLIKVIEW/QLIKSENSE PRESET
+
+// BEFORE PUBLISH YOUR APP, CHANGE VARIABLE VALUE FROM dev TO prod 
+// dev 	- DURING DEVELOPMENT
+// prod - WHEN PUBLISH THE APP
+
+
+SET vState = 'dev';
+
+if vState = 'prod' then
+
+	TRACE App State: Production;
+
+	//SET VARIABLES TO PROD STATE
+	LET vTimeToLoad = 3;			//e.g. for full or incremental
+	SET vDir ='FOLDER_Prod';		//e.g. development folder connection (read/write)
+	LIB CONNECT TO 'MySQL_Prod';	//e.g. database connection
+else
+
+	TRACE App State: Development;
+
+	//SET VARIABLES TO DEV STATE
+	LET vTimeToLoad = Hour(Now());	//e.g. for full or incremental
+	SET vDir ='FOLDER_Prod';		//e.g. development folder connection (read/write)
+	LIB CONNECT TO 'MySQL_Dev';		//e.g. database connection
+endif;
+
