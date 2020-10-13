@@ -5,7 +5,7 @@
 - Load measures from a sheet file and use into master items.
 
 	LOAD THE SHEET FILE EXAMPLE...
-	> See the example [sheet file here](MeasuresFromFile/Expressions.xlsx).
+	See the example [sheet file here](MeasuresFromFile/Expressions.xlsx).
 	
 	...AND CONFIGURE MASTER ITEM LIKE THIS EXAMPLE
 	1. Expression: $(vCredit_E)
