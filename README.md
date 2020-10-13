@@ -1,4 +1,5 @@
 # qlik
+# qlik
 Multpurpose Qlik Sense and Qlik View scripts
 
 **Usage**
@@ -17,3 +18,6 @@ Multpurpose Qlik Sense and Qlik View scripts
   - Text Functions
   - Mask Functions
   - App State
+
+## Scripts
+  - Measures from file
