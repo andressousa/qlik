@@ -36,6 +36,7 @@ Step 5. For each dimension and measure:
       This condition must be used in 'Year' dimension column.
 
 Step 6. Optional - Insert a Calculation Condition.
+	
 	e.g. IF( GetSelectedCount([Dimension]) > 0 or GetSelectedCount([Measure]) > 0, 1, 0 )
 
 Note:
