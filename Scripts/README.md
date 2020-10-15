@@ -15,7 +15,7 @@ Load measures from a sheet file and use into master items.
 ## Custom Report
 Custom table export using default simple or pivot table.
 
-You can download the [demo app here](CustomREport/CustomReport.qvf).
+You can download a [demo app here](CustomREport/CustomReport.qvf).
 
 Step 1. Create a linine table with all dimensions to show
 
