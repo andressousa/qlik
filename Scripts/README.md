@@ -26,8 +26,9 @@ Step 3. Insert a single or pivot table in a sheet
 Step 4. Include the dimensions and measures you want to show into table
 
 Step 5. For each dimension and measure:
-    - Go to column properties
-    - Set the show condition like the example:
+	
+	- Go to column properties
+	- Set the show condition like the example:
     
       e.g. IF(GetSelectedCount([Dimension]) = 0, 0, SubStringCount('|' & Concat([Dimension], '|') & '|', '1 - Year'))
       e.g. IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|') & '|', '2 - Total Days'))
