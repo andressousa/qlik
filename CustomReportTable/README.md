@@ -94,3 +94,6 @@ Choose at least one dimension or measure to display the table.
 ```
 You should have a table like this:\
 ![Table 3](table_3.png)
+
+## Download
+You can download this [qvf example here](CustomReport.qvf).
