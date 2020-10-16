@@ -1,4 +1,4 @@
-# Customize and Export data with Simple or Pivot Table
+# Customize and Export data with Simple or Pivot Table with Qlik Sense®
 Export customizable table data from Qlik Sense® without extensions, to demonstrate this functionality, we will create a sample calendar table.
 
 ## Step One - Creating sample calendar table.
