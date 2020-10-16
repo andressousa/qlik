@@ -78,3 +78,6 @@ IF(GetSelectedCount([Dimension]) = 0, 0, SubStringCount('|' & Concat([Dimension]
 IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|') & '|', '1 - NetWork Days'))
 IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|') & '|', '2 - Total Days'))
 ```
+
+You should have a table like this:\
+![Table 1](table_2.PNG)
