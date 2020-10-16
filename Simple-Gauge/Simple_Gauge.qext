@@ -1,9 +1,0 @@
-{
-    "name" : "Simple Gauge",
-    "description" : "Gauge Visualization",
-    "icon" : "gauge-chart",
-    "type" : "visualization",
-    "version": "1.0",
-    "preview" : "Simple_Gauge.png",
-    "author": "André Santos(andreluisdossantossousa@gmail.com)"
-}
