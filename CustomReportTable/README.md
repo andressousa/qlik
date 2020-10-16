@@ -80,4 +80,4 @@ IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|
 ```
 
 You should have a table like this:\
-![Table 1](table_2.PNG)
+![Table 2](table_2.png)
