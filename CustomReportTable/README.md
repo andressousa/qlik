@@ -1,18 +1,63 @@
-# qlik
-Multpurpose Qlik Sense and Qlik View scripts
+# Customize and Export data with Simple or Pivot Table
+To demonstrate this functionality, we will create a sample calendar table.\
+Follow this steps:
 
-## Mashup STF (COVID19)
-- Qlik Sense Mashup Template for STF. This template was made on demmand to show COVID19 charts and other statistics.
+## Step One
+Creating sample calendar table.\
+This table is only to demonstrate.
 
-## Simple Gauge
-- Qlik Sense Gauge Extension.
+```
+//Brazilian date format DD/MM/YYYY
+LET vStartDate 	= Num(Date(‘01/01/2000’)); 
+LET vEndDate 	= Num(Date(‘31/12/2020’));    
 
-## Utils
-- Qlik multipurpose functions.
-  - Date Functions
-  - Text Functions
-  - Mask Functions
-  - App State
+Calendar:
+LOAD
+   Year(Date) AS Year
+  ,Month(Date) AS Mês
+  ,Ceil(Num(Month(Date))/2) & ‘B’ AS Bimester
+  ,Ceil(Num(Month(Date))/3) & ‘Q’ AS Quarter
+  ,ceil(Num(Month(Date))/6) & ‘S’ AS Semester
+  ,NetWorkDays(Date, Date) AS CountNetworkDays
+  ,1 AS CountDays
+;
+LOAD Date($(vStartDate) + IterNo() -1) AS Date
+AutoGenerate 1 While ($(vStartDate) + IterNo() -1) <= $(vEndDate);
+```
 
-## Scripts
-  - Measures from file
+## Step Two
+Create dimension and measure tables.\
+This tables will define who columns will be shown in export table.
+
+```
+[Dimensions]:
+Load * Inline [
+  Dimension
+  1 – Year
+  2 – Month
+  3 – Bimester
+  4 – Quarter
+  5 – Semester
+];
+
+[Measures]:
+Load * Inline [
+  Measure
+  1 – NetWork Days
+  2 – Total Days
+];
+```
+After load the script, you will see a data model like this:\
+![Data Model](datamodel.PNG)
+
+## Step Three
+Include a Filter Pane and add **Dimension** and **Measure** dimensions.\
+Include a Simple Table and add **Year**, **Month**, **Bimester**, **Quarter** and **Semester** dimensions.\
+Include **NetWork Days** and **Total Days** like measures.\
+- Sum(CountNetworkDays)
+- Sum(CountDays)
+
+You should have a table like this:
+![Table 1](table_1.PNG)
+
+## Step Four
