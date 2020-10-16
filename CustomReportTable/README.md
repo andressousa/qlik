@@ -12,7 +12,7 @@ LET vEndDate 	= Num(Date(‘31/12/2020’));
 Calendar:
 LOAD
    Year(Date) AS Year
-  ,Month(Date) AS Mês
+  ,Month(Date) AS Month
   ,Ceil(Num(Month(Date))/2) & ‘B’ AS Bimester
   ,Ceil(Num(Month(Date))/3) & ‘Q’ AS Quarter
   ,ceil(Num(Month(Date))/6) & ‘S’ AS Semester
