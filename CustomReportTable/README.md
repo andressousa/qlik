@@ -1,6 +1,5 @@
 # Customize and Export data with Simple or Pivot Table
-To demonstrate this functionality, we will create a sample calendar table.\
-Follow this steps:
+Export customizable table data from Qlik Sense® without extensions, to demonstrate this functionality, we will create a sample calendar table.
 
 ## Step One - Creating sample calendar table.
 This table is only to demonstrate.
@@ -81,3 +80,17 @@ IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|
 
 You should have a table like this:\
 ![Table 2](table_2.png)
+
+>NOTE: When you define the show/hide condition, the reffered column is hidden.
+
+## Step Five - Add a Calculate Condition with custom message
+Go to **Data Manipulation section** and set **Calculation Condition** like this:
+```
+IF( GetSelectedCount([Dimensão]) > 0 or GetSelectedCount([Medida]) > 0, 1, 0 )
+```
+And set a custom message:
+```
+Choose at least one dimension or measure to display the table.
+```
+You should have a table like this:\
+![Table 3](table_3.png)
