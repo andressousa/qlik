@@ -47,7 +47,7 @@ Load * Inline [
 >NOTE: The number before dimension and measure title is to prevent conflict in show/hide conditions.
 
 After load the script, you will see a data model like this:\
-![Data Model](datamodel.PNG)
+![Data Model](img/datamodel.PNG)
 
 ## Step Three - Include a Filter and Simple Table
 Include a Filter Pane and add **Dimension** and **Measure** dimensions.\
@@ -57,7 +57,7 @@ Include **NetWork Days** and **Total Days** like measures.\
 - Sum(CountDays)
 
 You should have a table like this:\
-![Table 1](table_1.PNG)
+![Table 1](img/table_1.PNG)
 
 ## Step Four - Add show condition into column properties.
 For each dimension and measure, you will insert a condition to show/hide the column from table.\
@@ -79,7 +79,7 @@ IF(GetSelectedCount([Measure]) = 0, 0, SubStringCount('|' & Concat([Measure], '|
 ```
 
 You should have a table like this:\
-![Table 2](table_2.png)
+![Table 2](img/table_2.png)
 
 >NOTE: When you define the show/hide condition, the reffered column is hidden.
 
@@ -93,7 +93,7 @@ And set a custom message:
 Choose at least one dimension or measure to display the table.
 ```
 You should have a table like this:\
-![Table 3](table_3.png)
+![Table 3](img/table_3.png)
 
 ## Download
 You can download this [qvf example here](CustomReport.qvf).
