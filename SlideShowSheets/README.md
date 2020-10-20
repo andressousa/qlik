@@ -1,6 +1,8 @@
 # Turn your Qlik Sense® App into a Slideshow for Presentation.
 Each worksheet will be displayed for the time that is determined, then navigate to the next worksheet.
 
+[![Turn your Qlik Sense® App into a Slideshow for Presentation.](https://img.youtube.com/vi/2c9u_keDAHY/0.jpg)](https://www.youtube.com/watch?v=2c9u_keDAHY)
+
 ## Step One - Download this Extension
 Download all files extension.
 
