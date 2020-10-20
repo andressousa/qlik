@@ -1,0 +1,11 @@
+{
+    "name" : "Slide Show Sheets",
+    "description" : "Turn Qlik Sense Sheets into Slideshow",
+    "icon" : "extension",
+    "type" : "visualization",
+    "version": "1.0.0",
+    "preview" : "bar",
+    "author": "André Santos"
+}
+
+

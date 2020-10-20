@@ -1,0 +1,48 @@
+#progressCoutdown{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 25px;
+	overflow: hidden;
+	font-size: .75rem;
+	background-color: #e9ecef;
+	border-radius: .25rem;
+}
+
+#progressCoutdown div{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	background-color: #CCCCCC;
+	transition: width .6s ease;
+	animation-timing-function: ease-in-out;
+	animation-duration: 5s;
+    animation-fill-mode:both; 
+}
+
+#progressCoutdown div.bw{
+	animation-name: backward;
+}
+
+#progressCoutdown div.fw{
+	animation-name: forward;
+}
+
+@keyframes backward {
+  	0% { width: 100%; }
+  	100% { width: 0; }
+}
+
+@keyframes forward {
+  	0% { width: 0; }
+  	100% { width: 100%; }
+}
