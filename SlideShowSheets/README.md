@@ -23,4 +23,4 @@ If you don't know how to install extension, see in [Qlik Help](https://help.qlik
 ![How Configure Timer](img/insert.png)
 
 ## Download
-You can download this [qvf example here](SlideShowSheet.qvf).
+You can download this [qvf example here](example/SlideShowSheet.qvf).
