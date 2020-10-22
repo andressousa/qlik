@@ -11,7 +11,7 @@ If you don't know how to install widgets, see in [Qlik Help](https://help.qlik.c
 Include one extension object into each sheet app;
 
 ### Alerts
-![Alerts](img/Alerts.png)
+![Alerts](img/Alerts.PNG)
 
 ## Download
 You can download this [qvf example here](SlideShowSheet.qvf).
