@@ -98,4 +98,4 @@ You should have a table like this:\
 ![Table 3](img/table_3.png)
 
 ## Download
-You can download this [qvf example here](CustomReport.qvf).
+You can download this [qvf example here](example/CustomReport.qvf).
