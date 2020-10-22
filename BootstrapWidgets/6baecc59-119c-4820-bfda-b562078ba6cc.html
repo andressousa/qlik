@@ -1,0 +1,90 @@
+<style>.card{
+    position:relative;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    min-width:0;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius:.25rem;
+}
+.card-body{
+    -ms-flex:1 1 auto;
+    flex:1 1 auto;
+    min-height:1px;
+    padding:1.25rem;
+}
+.card-title{
+    margin-bottom:.75rem;
+}
+.card-text:last-child{
+    margin-bottom:0;
+}
+.card-header{
+    padding:.75rem 1.25rem;
+    margin-bottom:0;
+    background-color:rgba(0,0,0,.03);
+    border-bottom:1px solid rgba(0,0,0,.125);
+}
+.card-header:first-child{
+    border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card-footer{
+    padding:.75rem 1.25rem;
+    background-color:rgba(0,0,0,.03);
+    border-top:1px solid rgba(0,0,0,.125);
+}
+.card-footer:last-child{
+    border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+.card-img-top{
+    -ms-flex-negative:0;
+    flex-shrink:0;
+    width:100%;
+    border-top-left-radius:calc(.25rem - 1px);
+    border-top-right-radius:calc(.25rem - 1px);
+}
+
+.card h5{
+    margin-top:0;
+    margin-bottom:.5rem;
+    font-weight:500;
+    line-height:1.25rem;
+    font-size:1.25rem;
+}
+.card-primary,
+.card-success,
+.card-secondary,
+.card-danger,
+.card-warning,
+.card-info,
+.card-dark{
+	color: white;
+}
+.card-secondary{background-color:#6c757d!important;}
+.card-primary{background-color:#007bff!important;}
+.card-success{background-color:#28a745!important;}
+.card-danger{background-color:#dc3545!important;}
+.card-warning{background-color:#ffc107!important;}
+.card-info{background-color:#17a2b8!important;}
+.card-light{background-color:#f8f9fa!important;}
+.card-dark{background-color:#343a40!important;}
+
+.card-custom{
+	background-color:{{settings.cardCustomBgColor}}!important;
+	color:{{settings.cardCustomTextColor}}!important;
+}</style>
+<div><div class="card card-{{settings.cardStyle}}">
+	<div ng-if="settings.cardHeaderTitle.length > 0" class="card-header">{{settings.cardHeaderTitle}}</div>
+	<img ng-if="settings.cardImageUrl.length > 0" src="{{settings.cardImageUrl}}" class="card-img-top">
+	<div ng-if="settings.cardTitle.length > 0 || settings.cardText.length > 0" class="card-body">
+		<h5 ng-if="settings.cardTitle.length > 0" class="card-title">{{settings.cardTitle}}</h5>
+		<p ng-if="settings.cardText.length > 0" class="card-text">{{settings.cardText}}</p>
+	</div>
+	<div ng-if="settings.cardFooterText.length > 0" class="card-footer">{{settings.cardFooterText}}</div>
+</div>
+
+</div>

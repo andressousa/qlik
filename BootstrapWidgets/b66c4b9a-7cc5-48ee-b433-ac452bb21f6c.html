@@ -1,0 +1,29 @@
+<style>.parallax {
+	background-image: url("{{settings.imageURL}}");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	opacity: 0.65;
+}
+
+.parallax .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: {{settings.captionTextColor}};
+}
+
+.parallax .h1{font-size:2.5rem;}
+.parallax .h1{font-size:2.5rem;}
+.parallax .h2{font-size:2rem;}
+.parallax .h3{font-size:1.75rem;}
+.parallax .h4{font-size:1.5rem;}
+</style>
+<div><div class="parallax">
+	<div class="caption {{settings.captionSize}}">SCROLL DOWN</div>
+</div></div>

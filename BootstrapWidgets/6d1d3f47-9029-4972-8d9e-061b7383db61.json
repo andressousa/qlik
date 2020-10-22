@@ -1,0 +1,10 @@
+{
+  "name": "Navgation Buttons",
+  "description": "",
+  "author": "",
+  "library": "BootstrapWidgets",
+  "meta": {
+    "type": "navigation"
+  },
+  "dependencies": {}
+}

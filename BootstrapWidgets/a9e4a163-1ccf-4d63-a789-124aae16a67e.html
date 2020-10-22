@@ -1,0 +1,77 @@
+<style>table{
+    border-collapse:collapse;
+}
+th{
+    text-align:inherit;
+    text-align:-webkit-match-parent;
+}
+.table{
+    width:100%;
+    margin-bottom:1rem;
+    color:#212529;
+}
+.table td,.table th{
+    padding:.75rem;
+    vertical-align:top;
+    border-top:1px solid #dee2e6;
+}
+.table thead th{
+    vertical-align:bottom;
+    border-bottom:2px solid #dee2e6;
+}
+.table-bordered{
+    border:1px solid #dee2e6;
+}
+.table-bordered td,.table-bordered th{
+    border:1px solid #dee2e6;
+}
+.table-bordered thead th{
+    border-bottom-width:2px;
+}
+.table-borderless td,.table-borderless th,.table-borderless thead th{
+    border:0!important;
+}
+.table-dark{
+    color:#fff;
+    background-color:#343a40;
+	border-color:#454d55;
+}
+.table-dark td,.table-dark th,.table-dark thead th{
+    border-color:#454d55;
+}
+.table-striped tbody tr:nth-of-type(odd){
+    background-color:rgba(0,0,0,.05);
+}
+.table-dark.table-striped tbody tr:nth-of-type(odd){
+    background-color:rgba(255,255,255,.05);
+}
+.table-hover tbody tr:hover{
+    color:#212529;
+    background-color:rgba(0,0,0,.075);
+}
+.table-dark.table-hover tbody tr:hover{
+    color:#fff;
+    background-color:rgba(255,255,255,.075);
+}
+.table-sm td,.table-sm th{
+    padding:.3rem;
+}</style>
+<div><table class="table table-{{settings.tableType}} table-{{settings.tableStriped}} table-{{settings.tableBorder}} table-{{settings.tableHover}} table-{{settings.tableCondensed}}">
+	<thead>
+	<tr>
+		<th ng-repeat="head in data.headers">
+			{{head.qFallbackTitle}}
+		</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in data.rows">
+		<td ng-repeat="cell in row.cells">
+			{{cell.qText}}
+		</td>
+	</tr>
+	</tbody>
+</table>
+<div ng-if="data.rows.length === 0">
+	Please add dimensions and measures.
+</div></div>

@@ -1,0 +1,75 @@
+<style>.alert{
+    position:relative;
+    padding:.75rem 1.25rem;
+    margin-bottom:1rem;
+    border:1px solid transparent;
+    border-radius:.25rem;
+}
+.alert h4{
+    margin-top:0;
+    margin-bottom:.5rem;
+    font-weight:500;
+    line-height:1.5;
+    font-size:1.5rem;
+}
+.alert p{
+    margin-top:0;
+    margin-bottom:1rem;
+}
+.alert hr{
+    border-top-color:rgba(0,0,0,0.09);
+}
+.alert-primary{
+    color:#004085;
+    background-color:#cce5ff;
+    border-color:#b8daff;
+}
+.alert-secondary{
+    color:#383d41;
+    background-color:#e2e3e5;
+    border-color:#d6d8db;
+}
+.alert-success{
+    color:#155724;
+    background-color:#d4edda;
+    border-color:#c3e6cb;
+}
+
+.alert-danger{
+    color:#721c24;
+    background-color:#f8d7da;
+    border-color:#f5c6cb;
+}
+.alert-warning{
+    color:#856404;
+    background-color:#fff3cd;
+    border-color:#ffeeba;
+}
+.alert-info{
+    color:#0c5460;
+    background-color:#d1ecf1;
+    border-color:#bee5eb;
+}
+.alert-light{
+    color:#818182;
+    background-color:#fefefe;
+    border-color:#fdfdfe;
+}
+.alert-dark{
+    color:#1b1e21;
+    background-color:#d6d8d9;
+    border-color:#c6c8ca;
+}
+.alert-custom{
+    color:{{settings.customTxtColor}};
+    background-color:{{settings.customBgColor}};
+    border-color:{{settings.customBorderColor}};
+}
+
+</style>
+<div><div class="alert alert-{{settings.type}}" role="alert">
+	<h4 ng-if="settings.headerTitle.length > 0" class="alert-heading">{{settings.headerTitle}}</h4>
+	<p ng-if="settings.textOne.length > 0">{{settings.textOne}}</p>
+	<hr ng-if="settings.showSeparator == 1">
+	<p ng-if="settings.textTwo.length > 0">{{settings.textTwo}}</p>
+</div></div>
