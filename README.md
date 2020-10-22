@@ -8,3 +8,7 @@ Export customizable table data from Qlik Sense® without extensions. To demonstr
 ## Turn your Qlik Sense® App into a Slideshow for Presentation.
 Each worksheet will be displayed for the time that is determined, then navigate to the next worksheet.\
 [See This Project](SlideShowSheets)
+
+## Bootstrap 4 Based Widgets.
+Use Bootstrap 4 and other components into your app.\
+[See This Project](BootstrapWidgets)
