@@ -10,8 +10,17 @@ If you don't know how to install widgets, see in [Qlik Help](https://help.qlik.c
 ## Step Three - Open you App and Include Widgets
 Include one extension object into each sheet app;
 
-### Alerts
-![Alerts](img/Alerts.PNG)
+### Alert
+![Alert](img/Alerts.PNG)
+
+### Card
+![Alerts](img/Card.PNG)
+
+### Table
+![Alerts](img/Table.PNG)
+
+### Parallax
+![Alerts](img/Parallax.gif)
 
 ## Download
-You can download this [qvf example here](SlideShowSheet.qvf).
+You can download this [qvf example here](example/BootstrapWidgets.qvf).
