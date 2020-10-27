@@ -12,3 +12,7 @@ Each worksheet will be displayed for the time that is determined, then navigate 
 ## Bootstrap 4 Based Widgets.
 Use Bootstrap 4 and other components into your app.\
 [See This Project](BootstrapWidgets)
+
+## Scripts
+Multpurpose Qlik Sense and Qlik View Scripts.
+[See This Project](Scripts)
