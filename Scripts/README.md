@@ -36,4 +36,5 @@ Drop Field [CALENDAR_TABLE_NAME];
 ```
 
 **Result**
+
 ![Resulte Data](img/AutomaticCalendar.PNG)
