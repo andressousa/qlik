@@ -11,7 +11,7 @@ This script gets the dates from a 'Resident' table, therefore, the source table 
 1. Include the *AutomaticCalendar.inc* file in the script after loading the table containing the dates that will be used as the basis for generating the calendar table;
 2. Configure the source and destination parameters (see examples below).
 
-**Parâmetros:**
+**Settings:**
 
 - *vTableTable* - Name of the 'Resident' table that contains the date field;
 - *vCampoDataOrigem* - Name of the 'Resident' table field that contains the dates;
@@ -23,7 +23,10 @@ This script gets the dates from a 'Resident' table, therefore, the source table 
 
 ```
 [FACT_TABLE_NAME]:
-LOAD * FROM ...
+LOAD 
+  DATE_FIELD_NAME, 
+  ... 
+FROM ...
 
 LET vTabelaOrigem     = 'FACT_TABLE_NAME';
 LET vCampoDataOrigem  = 'DATE_FIELD_NAME';
@@ -37,6 +40,6 @@ Store [CALENDAR_TABLE_NAME] into [lib://LibName/Folder/MastarCalendar.qvd](qvd);
 Drop Field [CALENDAR_TABLE_NAME];
 ```
 
-**Result**
+**Result:**
 
 ![Resulte Data](img/AutomaticCalendar.PNG)
