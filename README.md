@@ -14,5 +14,7 @@ Use Bootstrap 4 and other components into your app.\
 [See This Project](BootstrapWidgets)
 
 ## Scripts
-Multpurpose Qlik Sense and Qlik View Scripts.
-[See This Project](Scripts)
+Multpurpose Qlik Sense and Qlik View Scripts.\
+[See This Project](Scripts).
+- Create a Calendar Table from another Table
+- Load Measures from XLS file
