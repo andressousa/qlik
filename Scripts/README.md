@@ -2,8 +2,7 @@
 Multpurpose Qlik Sense and Qlik View Scripts
 
 ## Create a Calendar Table from another Table.
-Create a master calendar from another table dynamically.\
-[See This Project](AutomaticCalendar)
+Create a master calendar from another table dynamically.
 
 **Instructions**
 
@@ -23,6 +22,9 @@ This script gets the dates from a 'Resident' table, therefore, the source table 
 **Usage:**
 
 ```
+[FACT_TABLE_NAME]:
+LOAD * FROM ...
+
 LET vTabelaOrigem     = 'FACT_TABLE_NAME';
 LET vCampoDataOrigem  = 'DATE_FIELD_NAME';
 LET vTabelaDestino    = 'CALENDAR_TABLE_NAME';
