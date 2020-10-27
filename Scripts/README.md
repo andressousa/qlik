@@ -22,7 +22,7 @@ This script gets the dates from a 'Resident' table, therefore, the source table 
 
 **Usage:**
 
-'''sss
+```
 LET vTabelaOrigem     = 'FACT_TABLE_NAME';
 LET vCampoDataOrigem  = 'DATE_FIELD_NAME';
 LET vTabelaDestino    = 'CALENDAR_TABLE_NAME';
@@ -31,9 +31,9 @@ LET vAutoCompletar    = 0;
 
 $(Include=LibName/CalendarioMestre.inc);
 
-Store [FINAL_TABLE_NAME] into [lib://Pasta/MastarCalendar.qvd](qvd);
-Drop Field [FINAL_TABLE_NAME];
-'''
+Store [CALENDAR_TABLE_NAME] into [lib://LibName/Folder/MastarCalendar.qvd](qvd);
+Drop Field [CALENDAR_TABLE_NAME];
+```
 
 **Result**
-![Resulte Data](img/Result.PNG)
+![Resulte Data](img/AutomaticCalendar.PNG)
