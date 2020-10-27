@@ -43,3 +43,23 @@ Drop Field [CALENDAR_TABLE_NAME];
 **Result:**
 
 ![Resulte Data](img/AutomaticCalendar.PNG)
+
+
+## Load Measures from XLS file.
+Load measures from a sheet file and use into master items.
+
+**Instructions**
+
+1. Fill and load the sheet file with measures (See the example [sheet file here](MeasuresFromFile/Expressions.xlsx)).
+2. Load [MeasuresFromFile.qvs](MeasuresFromFile/MeasuresFromFile.qvs);
+2. And set master items for each measure like this example
+
+**Settings:**
+
+Include master measure item and set the prperties:
+
+	- Expression: $(vVariableName_E)
+	- Expression label: =vVariableName_T
+	- Description: =vVariableName_D
+
+![alt text](img/MeasuresFromFile_1.PNG)
