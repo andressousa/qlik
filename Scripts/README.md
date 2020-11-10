@@ -34,9 +34,9 @@ LET vTabelaDestino    = 'CALENDAR_TABLE_NAME';
 LET vCampoDataDestino = 'DATE_FIELD_NAME';
 LET vAutoCompletar    = 0;  
 
-$(Include=LibName/CalendarioMestre.inc);
+$(Include=Libname/AutomaticCalendar.inc);
 
-Store [CALENDAR_TABLE_NAME] into [lib://LibName/Folder/MastarCalendar.qvd](qvd);
+Store [CALENDAR_TABLE_NAME] into [lib://Libname/Folder/MastarCalendar.qvd](qvd);
 Drop Field [CALENDAR_TABLE_NAME];
 ```
 
