@@ -1,6 +1,12 @@
-define(['jquery','qlik','ng!$q','ng!$http'], function ($, qlik, $q, $http) {
+define(['jquery', 'qlik', 'ng!$q', 'ng!$http'], 
+
+	function ($, qlik, $q, $http) {
     'use strict';
+
+    //obtendo instância do app
 	var app = qlik.currApp();
+
+	//função para listar todas as pastas existentes (por fé)
 	var getSheetList = function (){
 		var defer = $q.defer();
 		app.getAppObjectList(function(data){
@@ -27,40 +33,25 @@ define(['jquery','qlik','ng!$q','ng!$http'], function ($, qlik, $q, $http) {
 		options: 	function(){ return getSheetList().then(function(items){ return items; }); }
 	};
 
- 	var timeDelay = {
+	var timeDelay = {
 		type: 			"number",
-		component: 		"dropdown",
-		label: 			"Duration",
+		label: 			"Duration (seconds)",
 		ref: 			"timeDelay",
-		defaultValue: 	20000,
-		options:[
-			 {value: 5,  label: "05 seconds"}
-			,{value: 10, label: "10 seconds"}
-			,{value: 15, label: "15 seconds"}
-			,{value: 20, label: "20 seconds"}
-			,{value: 25, label: "25 seconds"}
-			,{value: 30, label: "30 seconds"}
-			,{value: 35, label: "35 seconds"}
-			,{value: 40, label: "40 seconds"}
-			,{value: 45, label: "45 seconds"}
-			,{value: 50, label: "50 seconds"}
-			,{value: 55, label: "55 seconds"}
-			,{value: 60, label: "01 minute"}
-		]		
-	};	
+		defaultValue: 	20,
+	};
 
 	var progressBg = {
 		type: 			"string",
 		label: 			"Color",
 		ref: 			"progressBg",
-		defaultValue: 	'#CCCCCC',
+		defaultValue: 	"#CCCCCC",
 	};
 
 	var progressHeight = {
-		type: 			"string",
+		type: 			"number",
 		label: 			"Height",
 		ref: 			"progressHeight",
-		defaultValue: 	'25',
+		defaultValue: 	25,
 	};
 	
  	var progressAnimation = {
@@ -68,10 +59,10 @@ define(['jquery','qlik','ng!$q','ng!$http'], function ($, qlik, $q, $http) {
 		component: 		"dropdown",
 		label: 			"Direction",
 		ref: 			"progressAnimation",
-		defaultValue: 	'fw',
+		defaultValue: 	"fw",
 		options:[
-			 {value: 'fw', label: "Right"}
-			,{value: 'bw', label: "Left"}
+			 {value: "fw", label: "Right"}
+			,{value: "bw", label: "Left"}
 		]		
 	};	
 
@@ -79,11 +70,11 @@ define(['jquery','qlik','ng!$q','ng!$http'], function ($, qlik, $q, $http) {
 		type: 	"items",
 		label: 	"Options",
 		items: 	{ 
-			timeDelay:timeDelay, 
-			sheetList:sheetList,
-			progressAnimation:progressAnimation,
-			progressBg:progressBg,
-			progressHeight:progressHeight
+			timeDelay: 			timeDelay, 
+			sheetList: 			sheetList,
+			progressAnimation: 	progressAnimation,
+			progressBg: 		progressBg,
+			progressHeight: 	progressHeight
 		}
 	};
 		
