@@ -15,7 +15,6 @@ IF $(vAutoCompletar) = 1 THEN
     //getting the start and end date of the calendar
     LET vMinDate = peek('INICIO', 0, 'CAL_TEMP_1');
     LET vMaxDate = peek('FIM', 0, 'CAL_TEMP_1');
-    Drop Table [CAL_TEMP_1];
 
     //generating all dates between the start and end date
     [CAL_TEMP_2]:
@@ -23,6 +22,8 @@ IF $(vAutoCompletar) = 1 THEN
     While( $(vMinDate) + IterNo() -1 ) <= $(vMaxDate);
   
   ENDIF;
+  
+  Drop Table [CAL_TEMP_1];
 
 //IF YOU DID NOT CHOOSE TO COMPLETE THE MISSING DATES
 ELSE	 
