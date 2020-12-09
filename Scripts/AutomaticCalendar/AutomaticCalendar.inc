@@ -26,7 +26,7 @@ IF $(vAutoCompletar) = 1 THEN
   Drop Table [CAL_TEMP_1];
 
 //IF YOU DID NOT CHOOSE TO COMPLETE THE MISSING DATES
-ELSE	 
+ELSE   
  
   //getting the start and end date of the calendar
   [CAL_TEMP_2]:
@@ -39,22 +39,22 @@ END IF;
 //generating the final calendar table
 [$(vTabelaDestino)]:
 LOAD 
-   NULL() as [$(vCampoDataDestino)]
-  ,NULL() as [Date]
-  ,NULL() as [Year]
-  ,NULL() as [Bimester]
-  ,NULL() as [Quarter]
-  ,NULL() as [FourMonths]
-  ,NULL() as [Semester]
-  ,NULL() as [Month]
-  ,NULL() as [MonthName]
-  ,NULL() as [MonthStart]
-  ,NULL() as [MonthEnd]
-  ,NULL() as [Day]
-  ,NULL() as [WeekDay]
-  ,NULL() as [NetWorkDay]
-  ,NULL() as [Week]
-  ,NULL() as [WeekName]
+   NUM(NULL()) as [$(vCampoDataDestino)]
+  ,Date(NULL()) as [Date]
+  ,Num(Year(NULL()), '0000') as [Year]
+  ,Ceil(Num(Month(NULL()))/2) as [Bimester]
+  ,Ceil(Num(Month(NULL()))/3) as [Quarter]
+  ,Ceil(Num(Month(NULL()))/4) as [FourMonths]
+  ,Ceil(Num(Month(NULL()))/6) as [Semester]
+  ,Month(NULL()) as [Month]
+  ,MonthName(NULL()) as [MonthName]
+  ,if( Date(NULL()) = MonthStart(NULL()), 1, 0) as [MonthStart]
+  ,if( Date(NULL()) = MonthEnd(NULL()), 1, 0) as [MonthEnd]
+  ,Num(Day(NULL()), '00') as [Day]
+  ,WeekDay(NULL()) as [WeekDay]
+  ,NetWorkDays(NULL(), NULL()) as [NetWorkDay]
+  ,Num(Week(NULL()), '00') as [Week]
+  ,WeekName(NULL()) as [WeekName]
 AutoGenerate 0;
 
 IF NoOfRows('CAL_TEMP_2') > 0 THEN
@@ -63,15 +63,15 @@ IF NoOfRows('CAL_TEMP_2') > 0 THEN
   LOAD Distinct 
      [D] as [$(vCampoDataDestino)]
     ,Date([D]) as [Date]
-    ,Num(Year([D]), '0000')	as [Year]
+    ,Num(Year([D]), '0000') as [Year]
     ,Ceil(Num(Month([D]))/2) as [Bimester]
     ,Ceil(Num(Month([D]))/3) as [Quarter]
     ,Ceil(Num(Month([D]))/4) as [FourMonths]
     ,Ceil(Num(Month([D]))/6) as [Semester]
     ,Month([D]) as [Month]
     ,MonthName([D]) as [MonthName]
-    ,if( Date([D]) = MonthStart([D]), 1, 0)	as [MonthStart]
-    ,if( Date([D]) = MonthEnd([D]), 1, 0)	as [MonthEnd]
+    ,if( Date([D]) = MonthStart([D]), 1, 0) as [MonthStart]
+    ,if( Date([D]) = MonthEnd([D]), 1, 0) as [MonthEnd]
     ,Num(Day([D]), '00') as [Day]
     ,WeekDay([D]) as [WeekDay]
     ,NetWorkDays([D], [D]) as [NetWorkDay]
