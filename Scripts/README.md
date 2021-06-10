@@ -77,7 +77,7 @@ Creat masks in multiple data types.
 ```
 [TABLE]:
 LOAD 
-  $(vMascaraCPF(CPF_FIELD)) AS CPF, 
+  $(vMascaraCPF(CPF_FIELD)) AS CPF, // 00000000000 -> 000.000.000-00
   ... 
 FROM ...
 ```
