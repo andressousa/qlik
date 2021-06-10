@@ -22,3 +22,5 @@ Multpurpose Qlik Sense and Qlik View Scripts.\
 [See This Project](Scripts).
 - Create a Calendar Table from another Table
 - Load Measures from XLS file
+- Masks
+- Validations

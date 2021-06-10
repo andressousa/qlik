@@ -63,3 +63,21 @@ Include master measure item and set the prperties:
 	- Description: =vVariableName_D
 
 ![alt text](img/MeasuresFromFile_1.PNG)
+
+## Masks.
+Creat masks in multiple data types.
+
+**Instructions**
+
+1. Download mask.inc file;
+2. Include into you project app;
+
+**Usage:**
+
+```
+[TABLE]:
+LOAD 
+  $(vMascaraCPF(CPF_FIELD)) AS CPF, 
+  ... 
+FROM ...
+```
