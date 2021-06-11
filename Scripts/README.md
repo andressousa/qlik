@@ -90,4 +90,4 @@ Validate multiple data types.
 1. To validate CPF, uses cpf.qvs file;
 2. To validate CNPJ, uses cpf.qvs file;
 
-Download example: [CPF_CNPJ.qvf](Validations/CNPJ.qvs);
+Download example: [CPF_CNPJ.qvf](Validations/cpf_cnpj.qvf);
