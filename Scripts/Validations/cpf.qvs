@@ -1,0 +1,51 @@
+CPF:
+Load
+  CPF,
+  if( Right( CPF, 2 ) = Digito_1 & Digito_2, 'Válido', 'Inválido') as Status_cpf
+;
+Load
+  CPF,
+  if( Digito_1 > 9, 0, Digito_1 ) as Digito_1,
+  if( Digito_2 > 9, 0, Digito_2 ) as Digito_2
+;
+Load
+  CPF,
+  Digito_1,
+  11 - Mod( RangeSum(
+    Mid( CPF, 1, 1) * 11,
+    Mid( CPF, 2, 1) * 10,
+    Mid( CPF, 3, 1) * 9,
+    Mid( CPF, 4, 1) * 8,
+    Mid( CPF, 5, 1) * 7,
+    Mid( CPF, 6, 1) * 6,
+    Mid( CPF, 7, 1) * 5,
+    Mid( CPF, 8, 1) * 4,
+    Mid( CPF, 9, 1) * 3,
+    if( Digito_1 > 9, 0, Digito_1 ) * 2 ), 11 
+  ) as Digito_2
+;
+Load
+  CPF,
+  11 - Mod( RangeSum(
+    Mid( CPF, 1, 1 ) * 10,
+    Mid( CPF, 2, 1 ) * 9,
+    Mid( CPF, 3, 1 ) * 8,
+    Mid( CPF, 4, 1 ) * 7,
+    Mid( CPF, 5, 1 ) * 6,
+    Mid( CPF, 6, 1 ) * 5,
+    Mid( CPF, 7, 1 ) * 4,
+    Mid( CPF, 8, 1 ) * 3,
+    Mid( CPF, 9, 1 ) * 2
+  ), 11 ) as Digito_1
+;
+load 
+  Num( KeepChar(CPF, '0123456789'), '00000000000' ) AS CPF
+;
+
+//this is only for example
+load * inline [
+	CPF
+	539.855.160-49
+	539.855.160-40
+	539.855.160-48	
+];
