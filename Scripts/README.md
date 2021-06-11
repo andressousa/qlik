@@ -81,3 +81,13 @@ LOAD
   ... 
 FROM ...
 ```
+
+## Validations.
+Validate multiple data types.
+
+**Instructions**
+
+1. To validate CPF, uses cpf.qvs file;
+2. To validate CNPJ, uses cpf.qvs file;
+
+Download example: [CPF_CNPJ.qvf](Validations/CPF_CNPJ.qvf);
