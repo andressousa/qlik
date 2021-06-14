@@ -18,7 +18,7 @@ If you don't know how to install extension, see in [Qlik Help](https://help.qlik
   - **Color:** Progressbar background color;
   - **Height:** Progressbar height.  
 
->NOTE: You must include one time inside each sheet that you want do slide.
+>NOTE: You must include one timer inside each sheet that you want do slide.
 
 ![How Configure Timer](img/insert.png)
 
