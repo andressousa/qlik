@@ -1,7 +1,8 @@
 CPF:
 Load
   CPF,
-  if( Right( CPF, 2 ) = Digito_1 & Digito_2, 'Válido', 'Inválido') as Status_cpf
+  if( Len(CPF) = SubStringCount(CPF, Left(CPF, 1) ), 'Inválido',
+  if( Right( CPF, 2 ) = Digito_1 & Digito_2, 'Válido', 'Inválido')) as Status_cpf
 ;
 Load
   CPF,

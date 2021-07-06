@@ -1,6 +1,7 @@
 CNPJ:
 Load
   CNPJ,
+  if( Len(CNPJ) = SubStringCount(CNPJ, Left(CNPJ, 1) ), 'Inválido',
   if( Right( CNPJ, 2 ) = Digito_1 & Digito_2, 'Válido', 'Inválido') as Status_cnpj
 ;
 Load
