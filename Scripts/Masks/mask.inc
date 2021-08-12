@@ -13,8 +13,30 @@
     - Complementa com zeros a equerda caso a quantidade de dígito seja menor que 11.
     - Não efetua validação de CPF.
     
-    Uso: 		$(vMascaraCPF([NUMERO_CPF]))
+    Uso: 	$(vMascaraCPF([NUMERO_CPF]))
     Entrada: 	$(vMascaraCPF('12345678912'))
-    Saída: 		123.456.789-12
+    Saída: 	123.456.789-12
 */
 SET vMascaraCPF = "IF( Len( Trim( $1 ) ) = 11, Left( $1, 3 ) & '.' & Mid( $1, 4, 3 ) & '.' & Mid( $1, 7, 3 ) & '-' & Left( $1, 2 ), Left( Num( $1, '00000000000' ), 3 ) & '.' & Mid( Num( $1, '00000000000' ), 4, 3 ) & '.' & Mid( Num( $1, '00000000000' ), 7, 3 ) & '-' & Left( Num( $1, '00000000000' ), 2 ) )";
+
+
+
+/**
+	Máscara para CNPJ
+    
+    - Complementa com zeros a equerda caso a quantidade de dígito seja menor que 14.
+    - Não efetua validação de CNPJ.
+    
+    Uso: 	$(vMascaraCNPJ([NUMERO_CNPJ]))
+    Entrada: 	$(vMascaraCNPJ('12345678912345'))
+    Saída: 	12.345.678.9123-45
+*/
+SET vMascaraCNPJ = "IF( Len( Trim( $1 ) ) = 14, Left($1, 2) & '.' & Mid($1, 3, 3) & '.' & Mid($1, 6, 3) & '/' & Mid($1, 9, 4) & '-' &  Right($1, 2), Left( Num( $1, '00000000000000' ), 2 ) & '.' & Mid( Num( $1, '00000000000000' ), 3, 3 ) & '.' & Mid( Num( $1, '00000000000000' ), 6, 3 ) & '/' & Mid( Num( $1, '00000000000000' ), 9, 4 ) & '-' &  Right( Num( $1, '00000000000000' ), 2 ) )";
+
+
+
+
+
+
+
+
