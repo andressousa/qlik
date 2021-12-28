@@ -1,5 +1,5 @@
 //CONFIGURAR CONEXÃO COM ARQUIVO
-LET vFilePath = 'C:\Users\Toccato\Desktop\Nova pasta\Database.xlsx';
+LET vFilePath = 'C:\Users\User\Desktop\Planilha.xlsx';
 ODBC CONNECT TO 'XLSDatabase;DBQ=$(vFilePath)';
 
 //OBTÉM LISTA DE PASTAS
